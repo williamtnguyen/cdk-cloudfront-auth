@@ -10,6 +10,12 @@ import { createNonceHmac, generateNonce } from "./util/nonce"
 export const handler = createRequestHandler(async (config, event) => {
   const request = event.Records[0].cf.request
   const domainName = request.headers["host"][0].value
+  if (request.uri.endsWith("/")) {
+    request.uri += "index.html"
+  }
+  if (!request.uri.includes(".")) {
+    request.uri += "/index.html"
+  }
   const requestedUri = `${request.uri}${
     request.querystring ? "?" + request.querystring : ""
   }`
