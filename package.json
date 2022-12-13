@@ -1,10 +1,10 @@
 {
-  "name": "@henrist/cdk-cloudfront-auth",
-  "version": "0.0.0-development",
+  "name": "@williamtnguyen/cdk-cloudfront-auth",
+  "version": "1.0.0",
   "description": "CDK Constructs for adding authentication for a CloudFront Distribution",
   "repository": {
     "type": "git",
-    "url": "https://github.com/henrist/cdk-cloudfront-auth"
+    "url": "https://github.com/williamtnguyen/cdk-cloudfront-auth"
   },
   "scripts": {
     "build": "rimraf dist && webpack && tsc",
